@@ -32,7 +32,7 @@ function loginUser() {
             break; 
         
         case "success":
-            window.location.href="notebook.html";
+            window.location.href="dashboard.html";
             break; 
 
         case "wrongUser":
