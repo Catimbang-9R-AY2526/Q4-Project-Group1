@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard-container">
+    <!-- Sidebar Section -->
+    <aside class="sidebar">
+        <div class="logo-area">
+            <div class="logo-circle">
+                <i class="fa-solid fa-paw"></i> <!-- Placeholder for the logo icon -->
+            </div>
+        </div>
+        
+        <nav class="nav-menu">
+            <ul>
+                <li class="nav-item active"><a href="#">Dashboard</a></li>
+                <li class="nav-item"><a href="#">Virtual Notebooks</a></li>
+                <li class="nav-item"><a href="#">Tasks</a></li>
+                <li class="nav-item"><a href="#">Profile</a></li>
+                <li class="nav-item"><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content Section -->
+    <main class="main-content">
+        
+        <!-- Top Header -->
+        <div class="top-header">
+            <div>
+                <div class="profile-badge">PROFILE</div>
+                <p class="profile-subtext">Student Information</p>
+            </div>
+        </div>
+
+        <!-- Content Body -->
+        <div class="content-body">
+            
+            <!-- Profile Picture / Upload Area -->
+            <div class="upload-profile-area">
+                <div class="avatar-preview" id="avatarPreview">
+                    <i class="fa-solid fa-user-tie"></i>
+                </div>
+                <div class="file-input-wrapper">
+                    <input type="file" id="fileUpload" accept="image/*">
+                    <label for="fileUpload" class="custom-file-btn">Choose File</label>
+                    <span id="fileName">No file chosen</span>
+                </div>
+            </div>
+
+            <!-- Student Information Card -->
+            <div class="student-card">
+                <h2 class="card-title">Student Information</h2>
+                
+                <div class="info-group">
+                    <label>Student ID</label>
+                    <p>SN123456</p>
+                </div>
+
+                <div class="info-group">
+                    <label>Contact Number</label>
+                    <p>+639150000001</p>
+                </div>
+
+                <div class="info-group">
+                    <label>Email Address</label>
+                    <p>delacruz.jr@obmontessori.edu.ph</p>
+                </div>
+
+                <div class="info-group">
+                    <label>Gender</label>
+                    <p>Male</p>
+                </div>
+
+                <button class="btn-change-password" id="changePassBtn">Change Password</button>
+            </div>
+
+        </div>
+    </main>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
