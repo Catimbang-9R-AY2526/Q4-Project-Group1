@@ -1,28 +1,31 @@
-// Image Upload Preview Logic
-const fileInput = document.getElementById('fileUpload');
-const fileNameDisplay = document.getElementById('fileName');
-const avatarPreview = document.getElementById('avatarPreview');
+document.addEventListener("DOMContentLoaded", () => {
 
-fileInput.addEventListener('change', function() {
-    if (this.files && this.files[0]) {
-        // Update file name text
-        fileNameDisplay.textContent = this.files[0].name;
+    // Select all custom buttons
+    const buttons = document.querySelectorAll(".btn-custom");
 
-        // Create a file reader to display the image
-        const reader = new FileReader();
-        
-        reader.onload = function(e) {
-            // Change the inner HTML of the avatar to show the uploaded image
-            avatarPreview.innerHTML = `<img src="${e.target.result}" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">`;
-        }
-        
-        reader.readAsDataURL(this.files[0]);
-    }
-});
+    buttons.forEach((button) => {
 
-// Change Password Button Interaction
-const changePassBtn = document.getElementById('changePassBtn');
+        button.addEventListener("click", () => {
 
-changePassBtn.addEventListener('click', function() {
-    alert("Change Password functionality would trigger here.");
+            const card = button.closest(".card");
+            const subject = card.querySelector("h2").textContent;
+            const activity = card.querySelector("h5").textContent;
+
+            // Actions depending on button text
+            if (button.textContent.includes("Take")) {
+                alert(`Opening activity:\n${subject} - ${activity}`);
+            }
+
+            else if (button.textContent.includes("Submit")) {
+                alert(`Submitting project for:\n${subject}`);
+            }
+
+            else if (button.textContent.includes("Play")) {
+                alert(`Playing video clip for:\n${subject}`);
+            }
+
+        });
+
+    });
+
 });
